@@ -20,6 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		if($this->modulos->check("test")){
+			echo '<a href="/test"><h3>El modulo Test</h3></a>';
+		}
 		$this->load->view('welcome_message');
 	}
 }
